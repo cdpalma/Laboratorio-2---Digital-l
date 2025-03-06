@@ -1,0 +1,22 @@
+##  CONFIGURACIÓN DE PROYECTO agregar en el archivo top.qsf ##
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE10E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY build
+
+## ASIGNACIÓN DE PINES ##
+set_location_assignment PIN_28 -to I01
+set_location_assignment PIN_31 -to I02
+set_location_assignment PIN_33 -to I03
+set_location_assignment PIN_38 -to I04
+
+#Salidas
+set_location_assignment PIN_43 -to Q01 #rekeparoemergencia
+set_location_assignment PIN_46 -to Q02 #relered
+set_location_assignment PIN_50 -to Q00 #ledparoemergencia
+set_location_assignment PIN_51 -to Q05 #ledfuncionamientored
+set_location_assignment PIN_53 -to Q03 #ledcargabateria
+set_location_assignment PIN_55 -to Q04 #ledsensorluz
+
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"

@@ -1,0 +1,186 @@
+{
+  "creator": "Yosys 0.33+6 (git sha1 41b34a193, x86_64-conda-linux-gnu-cc 11.2.0 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/root/conda-eda/conda-eda/workdir/conda-env/conda-bld/yosys_1694128612374/work=/usr/local/src/conda/yosys-0.33_7_g41b34a193 -fdebug-prefix-map=/home/r4gn4r550n/miniconda3/envs/digital=/usr/local/src/conda-prefix -fPIC -Os -fno-merge-constants)",
+  "modules": {
+    "top": {
+      "attributes": {
+        "hdlname": "\\top",
+        "top": "00000000000000000000000000000001",
+        "src": "./top.v:6.1-26.10"
+      },
+      "ports": {
+        "I01": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "I02": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "I03": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "I04": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "Q01": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "Q02": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "Q00": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "Q05": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "Q03": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "Q04": {
+          "direction": "output",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$not$./top.v:19$2": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "./top.v:19.21-19.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$or$./top.v:19$1": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "./top.v:19.24-19.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 7 ]
+          }
+        }
+      },
+      "netnames": {
+        "$or$./top.v:19$1_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "./top.v:19.24-19.33"
+          }
+        },
+        "I01": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "./top.v:7.9-7.12"
+          }
+        },
+        "I02": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "./top.v:8.9-8.12"
+          }
+        },
+        "I03": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "./top.v:9.9-9.12"
+          }
+        },
+        "I04": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "./top.v:10.9-10.12"
+          }
+        },
+        "Q00": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "./top.v:13.10-13.13"
+          }
+        },
+        "Q01": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "./top.v:11.10-11.13"
+          }
+        },
+        "Q02": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "./top.v:12.10-12.13"
+          }
+        },
+        "Q03": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "./top.v:15.10-15.13"
+          }
+        },
+        "Q04": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "./top.v:16.10-16.13"
+          }
+        },
+        "Q05": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "./top.v:14.10-14.13"
+          }
+        },
+        "Q05_temp": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "./top.v:18.8-18.16"
+          }
+        }
+      }
+    }
+  }
+}

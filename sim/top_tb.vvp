@@ -1,0 +1,51 @@
+#! /usr/bin/env bash
+exec /home/r4gn4r550n/miniconda3/envs/digital/bin/vvp -f "$0" "$@" <<'# EOF'
+:ivl_version "13.0 (devel)" "(0_8-6859-gf50cc35d2-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 8;
+:vpi_module "/home/r4gn4r550n/miniconda3/envs/digital/lib/ivl/system.vpi";
+:vpi_module "/home/r4gn4r550n/miniconda3/envs/digital/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/home/r4gn4r550n/miniconda3/envs/digital/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/home/r4gn4r550n/miniconda3/envs/digital/lib/ivl/v2005_math.vpi";
+:vpi_module "/home/r4gn4r550n/miniconda3/envs/digital/lib/ivl/va_math.vpi";
+S_0x17c9190 .scope module, "top_tb" "top_tb" 2 20;
+ .timescale -8 -8;
+P_0x17b4dc0 .param/l "INPUT_SIZE" 0 2 22, +C4<00000000000000000000000000000001>;
+P_0x17b4e00 .param/l "OUTPUT_SIZE" 0 2 23, +C4<00000000000000000000000000000001>;
+v0x17dacc0_0 .var "inputs", 0 0;
+v0x17dadb0_0 .net "probe", 0 0, L_0x17dae80;  1 drivers
+S_0x1790380 .scope module, "dut" "top" 2 91, 3 1 0, S_0x17c9190;
+ .timescale -8 -8;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "y";
+L_0x17dae80 .functor NOT 1, v0x17dacc0_0, C4<0>, C4<0>, C4<0>;
+v0x1790560_0 .net "a", 0 0, v0x17dacc0_0;  1 drivers
+v0x17daba0_0 .net "y", 0 0, L_0x17dae80;  alias, 1 drivers
+    .scope S_0x17c9190;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x17dacc0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x17dacc0_0, 0, 1;
+    %delay 2, 0;
+    %vpi_call 2 30 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x17c9190;
+T_1 ;
+    %vpi_call 2 97 "$monitor", "Time: %t, out = %d", $time, v0x17dadb0_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x17c9190;
+T_2 ;
+    %vpi_call 2 101 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x17c9190 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "top_tb.v";
+    "././top.v";
+# EOF
